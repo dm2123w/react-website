@@ -34,6 +34,9 @@ const MovieDetail = () => {
                             />
                         ))}
                     </Awards>
+                    <ImageDisplay>
+                        <img src={movie.secondaryImg} alt="movie" />
+                    </ImageDisplay>
                 </Details>
             )}
         </>
@@ -59,16 +62,46 @@ const HeadLine = styled.div`
         object-fit: cover;
     }
 `;
-const Awards = styled.div``;
+const Awards = styled.div`
+    min-height: 80vh;
+    display: flex;
+    margin: 2rem 10rem;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+const AwardStyle = styled.div`
+    padding: 4rem;
+    h3 {
+        font-size: 2rem;
+    }
+    .line {
+        width: 50%;
+        background: #23d997;
+        height: 0.5rem;
+        margin: 1rem 0rem;
+    }
+    p {
+        padding: 2rem 0rem;
+    }
+`;
+const ImageDisplay = styled.div`
+    min-height: 50vh;
+    img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+`;
 
 // Award Component
 const Award = ({ title, description }) => {
     return (
-        <div>
+        <AwardStyle>
             <h3>{title}</h3>
             <div className="line"></div>
             <p>{description}</p>
-        </div>
+        </AwardStyle>
     );
 };
 
