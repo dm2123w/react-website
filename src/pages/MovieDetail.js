@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { MovieState } from "../movieState";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
     const history = useHistory();
@@ -20,7 +23,12 @@ const MovieDetail = () => {
     return (
         <>
             {movie && (
-                <Details>
+                <Details
+                    variants={pageAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                >
                     <HeadLine>
                         <h2>{movie.title}</h2>
                         <img src={movie.mainImg} alt="movie" />
@@ -43,7 +51,7 @@ const MovieDetail = () => {
     );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     color: white;
 `;
 const HeadLine = styled.div`
@@ -87,7 +95,7 @@ const AwardStyle = styled.div`
 `;
 const ImageDisplay = styled.div`
     min-height: 50vh;
-    img{
+    img {
         width: 100%;
         height: 100vh;
         object-fit: cover;
