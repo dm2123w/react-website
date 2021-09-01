@@ -19,16 +19,16 @@ function App() {
             <Nav />
             <AnimatePresence exitBeforeEnter>
                 <Switch location={location} key={location.key}>
-                    <Route path="/" exact>
+                    <Route path="/react-website/" exact>
                         <AboutUs />
                     </Route>
-                    <Route path="/work" exact>
+                    <Route path="/react-website/work" exact>
                         <OurWork />
                     </Route>
-                    <Route path="/work/:id">
+                    <Route path="/react-website/work/:id">
                         <MovieDetail />
                     </Route>
-                    <Route path="/contact">
+                    <Route path="/react-website/contact">
                         <ContactUs />
                     </Route>
                 </Switch>

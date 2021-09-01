@@ -8,34 +8,34 @@ const Nav = () => {
     return (
         <StyledNav>
             <h1>
-                <Link id="logo" to="/">
+                <Link id="logo" to="/react-website/">
                     Capture
                 </Link>
             </h1>
             <ul>
                 <li>
-                    <Link to="/">About Us</Link>
+                    <Link to="/react-website/">About Us</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
-                        animate={{ width: pathname === "/" ? "50%" : "0%" }}
+                        animate={{ width: pathname === "/react-website/" ? "50%" : "0%" }}
                     />
                 </li>
                 <li>
-                    <Link to="/work">Our Work</Link>
+                    <Link to="/react-website/work">Our Work</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
-                        animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+                        animate={{ width: pathname === "/react-website/work" ? "50%" : "0%" }}
                     />
                 </li>
                 <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/react-website/contact">Contact Us</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
                         animate={{
-                            width: pathname === "/contact" ? "50%" : "0%",
+                            width: pathname === "/react-website/contact" ? "50%" : "0%",
                         }}
                     />
                 </li>
