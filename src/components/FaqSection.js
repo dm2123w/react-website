@@ -24,7 +24,6 @@ const FaqSection = () => {
                     </div>
                 </Toggle>
                 <Toggle title="Daily Schedule">
-                    <h4></h4>
                     <div className="answer">
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>
